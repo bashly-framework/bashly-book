@@ -151,6 +151,31 @@ Specify the indentation style of the generated script.
 - `tab_indent: true` - Indent with Tab (every 2 leading spaces will be converted
    to a tab character).
 
+### `formatter`
+
+```yaml
+# default
+formatter: internal
+
+# examples
+formatter: external
+formatter: none
+formatter: shfmt
+formatter: shfmt --minify
+```
+
+Choose a post-processor for the generated script:
+- `formatter: internal`  
+  Use Bashly's internal formatter. This formatter simply squashes any
+  consecutive number of newlines to a single newline.
+- `formatter: external`  
+  Run the predefined external command `shfmt --case-indent --indent 2`.
+- `formatter: none`  
+  Disable formatting entirely.
+- `formatter: <string>`  
+  Use a custom shell command to format the script. The command will receive the
+  script via stdin and must output the result to stdout.
+
 ## Interface Options
 
 ### `compact_short_flags`

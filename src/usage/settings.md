@@ -169,7 +169,7 @@ Choose a post-processor for the generated script:
   Use Bashly's internal formatter. This formatter simply squashes any
   consecutive number of newlines to a single newline.
 - `formatter: external`  
-  Run the predefined external command `shfmt --case-indent --indent 2`.
+  Run the predefined external command `shfmt --case-indent --indent 2`. Depends on `shfmt` being available.
 - `formatter: none`  
   Disable formatting entirely.
 - `formatter: <string>`  

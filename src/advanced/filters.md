@@ -15,8 +15,9 @@ This is how it works:
    which specifies an array of one or more function names.
 2. Whenever you run your script, it will search for functions with those names,
    prefixed by `filter_`, and execute them before running the command code.
-3. If any of the functions return (echo) a string, it will be treated as an
-   error. The returned string will be displayed on the screen as the error message.
+3. If any of the functions prints anything to standard output, it will be
+   treated as an error. The returned string will be displayed on the screen
+   as the error message.
 
 
 +++ Configuration

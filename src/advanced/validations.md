@@ -13,8 +13,8 @@ arguments, and environment variables. This is how it works:
 2. Whenever you run your script, it will look for a function with that name,
    prefixed by `validate_` and will run it before allowing the user
    input to pass.
-3. If the function returns any string, it is considered an error. The
-   string will be displayed on screen, as the error message.
+3. If the function prints any string to standard output, it is considered an
+   error. The string will be displayed on screen, as the error message.
 
 +++ Configuration
 

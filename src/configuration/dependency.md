@@ -44,7 +44,7 @@ When a command defines `dependencies`, it will also have the paths of the found
 dependencies in an associative array named `deps`. Call the `inspect_args`
 function from your command code to see this array.
 
-[!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies#readme) [!button variant="primary" icon="code-review" text="Alternate Dependencies Example"](https://github.com/DannyBen/bashly/tree/master/examples/dependencies-alt#readme)
+[!button variant="primary" icon="code-review" text="Dependencies Example"](https://github.com/bashly-framework/bashly/tree/master/examples/dependencies#readme) [!button variant="primary" icon="code-review" text="Alternate Dependencies Example"](https://github.com/bashly-framework/bashly/tree/master/examples/dependencies-alt#readme)
 
 ## Basic Options
 

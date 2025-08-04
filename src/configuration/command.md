@@ -92,7 +92,7 @@ name: upload
 alias: [u, push]  # upload, u and push will all run the same command
 ```
 
-[!button variant="primary" icon="code-review" text="Command Aliases Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-aliases#readme)
+[!button variant="primary" icon="code-review" text="Command Aliases Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-aliases#readme)
 
 
 ### help
@@ -124,7 +124,7 @@ Flags that are defined in a command that has subcommands, are considered
 "global flags", and will be available to all subcommands, in addition to any
 flag defined in any of the subcommands themselves.
 
-The [docker-like example](https://github.com/DannyBen/bashly/tree/master/examples/docker-like#readme)
+The [docker-like example](https://github.com/bashly-framework/bashly/tree/master/examples/docker-like#readme)
 demonstrates this feature.
 !!!
 
@@ -141,7 +141,7 @@ Specify the array of commands. Each command will have its own args and flags.
 Using `commands` on a given command implies that this command does not have flags or args.
 !!!
 
-[!button variant="primary" icon="code-review" text="Commands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands#readme) [!button variant="primary" icon="code-review" text="Subcommands Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-nested#readme) 
+[!button variant="primary" icon="code-review" text="Commands Example"](https://github.com/bashly-framework/bashly/tree/master/examples/commands#readme) [!button variant="primary" icon="code-review" text="Subcommands Example"](https://github.com/bashly-framework/bashly/tree/master/examples/commands-nested#readme) 
 
 
 
@@ -167,7 +167,7 @@ The string to display when using `--version`.
 - Setting this to `force` will also execute this command (instead of showing
   the root usage text) when executed without any arguments.
 
-[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default#readme) [!button variant="primary" icon="code-review" text="Forced Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-default-force#readme)
+[!button variant="primary" icon="code-review" text="Default Command Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-default#readme) [!button variant="primary" icon="code-review" text="Forced Command Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-default-force#readme)
 
 
 ### environment_variables
@@ -186,7 +186,7 @@ Specify an array of environment variables required or desired by your script.
 Specify an array of examples to show when using `--help`, or a multi-line
 string. 
 
-[!button variant="primary" icon="code-review" text="Command Examples Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples#readme)
+[!button variant="primary" icon="code-review" text="Command Examples Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-examples#readme)
 
 ### footer
 
@@ -194,7 +194,7 @@ string.
 
 Add a custom message that will be displayed at the end of the `--help` text. 
 
-[!button variant="primary" icon="code-review" text="Footer Example"](https://github.com/DannyBen/bashly/tree/master/examples/footer#readme)
+[!button variant="primary" icon="code-review" text="Footer Example"](https://github.com/bashly-framework/bashly/tree/master/examples/footer#readme)
 
 
 ### group
@@ -207,7 +207,7 @@ before this command.
 
 This option is purely for display purposes.
 
-[!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-groups#readme)
+[!button variant="primary" icon="code-review" text="Command Groups Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-groups#readme)
 
 ### variables
 
@@ -238,7 +238,7 @@ It can be set in one of three ways:
 To access arguments captured by `catch_all` in your script, use the
 `$other_args` array (or call the `inspect_args` command to see them).
 
-[!button variant="primary" icon="code-review" text="Catch All Example"](https://github.com/DannyBen/bashly/tree/master/examples/catch-all#readme) [!button variant="primary" icon="code-review" text="Catch All Advanced Example"](https://github.com/DannyBen/bashly/tree/master/examples/catch-all-advanced#readme)
+[!button variant="primary" icon="code-review" text="Catch All Example"](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all#readme) [!button variant="primary" icon="code-review" text="Catch All Advanced Example"](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all-advanced#readme)
 
 
 ### completions
@@ -268,7 +268,7 @@ Provide an alternative bash code or function call to be executed at the start of
 the help message. This is useful for displaying ASCII art when running your CLI
 with the `--help` option.
 
-[!button variant="primary" icon="code-review" text="Help Header Override Example"](https://github.com/DannyBen/bashly/tree/master/examples/help-header-override#readme)
+[!button variant="primary" icon="code-review" text="Help Header Override Example"](https://github.com/bashly-framework/bashly/tree/master/examples/help-header-override#readme)
 
 ### expose
 
@@ -286,7 +286,7 @@ show its subcommands in the help or usage text of the parent command.
 You can use `expose` with the [`group`](#group) option, to show subcommands
 in a logical, visual grouping.
 
-[!button variant="primary" icon="code-review" text="Commands Expose Example"](https://github.com/DannyBen/bashly/tree/master/examples/commands-expose#readme)
+[!button variant="primary" icon="code-review" text="Commands Expose Example"](https://github.com/bashly-framework/bashly/tree/master/examples/commands-expose#readme)
 
 
 ### extensible
@@ -311,7 +311,7 @@ To instruct bashly to store *all* command files in sub-directories, see
 [Settings :icon-chevron-right: commands_dir](/usage/settings/#commands_dir)
 !!!
 
-[!button variant="primary" icon="code-review" text="Command Filenames Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-filenames#readme)
+[!button variant="primary" icon="code-review" text="Command Filenames Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-filenames#readme)
 
 
 ### filters
@@ -346,7 +346,7 @@ Under most circumstances you should avoid using this directive. It is provided
 as a "last resort" mechanism to help in solving more complex scenarios.
 !!!
 
-[!button variant="primary" icon="code-review" text="Command Function Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-function#readme)
+[!button variant="primary" icon="code-review" text="Command Function Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-function#readme)
 
 
 
@@ -362,4 +362,4 @@ To allow users to see private commands, see
 [Settings :icon-chevron-right: private_reveal_key](/usage/settings/#private_reveal_key)
 !!!
 
-[!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-private#readme)
+[!button variant="primary" icon="code-review" text="Private Command Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-private#readme)

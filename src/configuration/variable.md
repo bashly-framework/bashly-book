@@ -42,7 +42,7 @@ Variables defined in the root command are available globally (in the
 within those specific commands.
 !!!
 
-[!button variant="primary" icon="code-review" text="Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/variables#readme)
+[!button variant="primary" icon="code-review" text="Variables Example"](https://github.com/bashly-framework/bashly/tree/master/examples/variables#readme)
 
 ## Basic Options
 

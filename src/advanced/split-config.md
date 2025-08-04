@@ -98,4 +98,4 @@ Running `bashly validate --verbose` shows the configuration file as Bashly sees
 it, even if it is invalid. This can be helpful when trying to debug validation
 errors for complex configuration files.
 
-[!button variant="primary" icon="code-review" text="Split Config Example"](https://github.com/DannyBen/bashly/tree/master/examples/split-config#readme)
+[!button variant="primary" icon="code-review" text="Split Config Example"](https://github.com/bashly-framework/bashly/tree/master/examples/split-config#readme)

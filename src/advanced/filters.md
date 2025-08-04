@@ -37,7 +37,7 @@ filter_docker_running() {
 
 +++
 
-[!button variant="primary" icon="code-review" text="Filters Example"](https://github.com/DannyBen/bashly/tree/master/examples/filters#readme)
+[!button variant="primary" icon="code-review" text="Filters Example"](https://github.com/bashly-framework/bashly/tree/master/examples/filters#readme)
 
 !!!success Tips
 - To verify a program is installed, use [`dependencies`](/configuration/command/#dependencies) instead.

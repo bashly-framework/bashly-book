@@ -53,4 +53,4 @@ In order to add these validations to your code, run:
 $ bashly add validations
 ```
 
-[!button variant="primary" icon="code-review" text="Validations Example"](https://github.com/DannyBen/bashly/tree/master/examples/validations#readme)
+[!button variant="primary" icon="code-review" text="Validations Example"](https://github.com/bashly-framework/bashly/tree/master/examples/validations#readme)

@@ -34,7 +34,7 @@ Most properties are optional, unless specified otherwise.
 !!!
 
 
-[!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/DannyBen/bashly/tree/master/examples/environment-variables#readme)
+[!button variant="primary" icon="code-review" text="Environment Variables Example"](https://github.com/bashly-framework/bashly/tree/master/examples/environment-variables#readme)
 
 ## Basic Options
 

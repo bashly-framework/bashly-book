@@ -34,7 +34,7 @@ $ bashly render :mandoc --about
 
 ## Example
 
-[!button variant="primary" icon="code-review" text="Markdown Example"](https://github.com/DannyBen/bashly/tree/master/examples/render-markdown#readme) [!button variant="primary" icon="code-review" text="Mandoc Example"](https://github.com/DannyBen/bashly/tree/master/examples/render-mandoc#readme)
+[!button variant="primary" icon="code-review" text="Markdown Example"](https://github.com/bashly-framework/bashly/tree/master/examples/render-markdown#readme) [!button variant="primary" icon="code-review" text="Mandoc Example"](https://github.com/bashly-framework/bashly/tree/master/examples/render-mandoc#readme)
 
 ## Custom templates
 
@@ -68,7 +68,7 @@ will have access to these variables and methods:
 
 | Variable  | Description
 |-----------|---------
-| `command` | The root command of your bashly script ([`Bashly::Script::Command`](https://github.com/DannyBen/bashly/blob/master/lib/bashly/script/command.rb)).
+| `command` | The root command of your bashly script ([`Bashly::Script::Command`](https://github.com/bashly-framework/bashly/blob/master/lib/bashly/script/command.rb)).
 | `source`  | A string containing the path to the template source directory.
 | `target`  | A string containing the path to the target directory, as provided by the user at run time (`bashly render SOURCE TARGET`).
 | `show`    | A string that will contain the value of `--show PATH` if provided by the user at runtime.
@@ -78,7 +78,7 @@ will have access to these variables and methods:
 | `save` | The method your script should call in order to save an output file.
 | `say`  | Print a message with colors (see [Colsole](https://github.com/dannyben/colsole))
 
-The `render.rb` script is executed with the [`Bashly::RenderContext`](https://github.com/DannyBen/bashly/blob/master/lib/bashly/render_context.rb) context.
+The `render.rb` script is executed with the [`Bashly::RenderContext`](https://github.com/bashly-framework/bashly/blob/master/lib/bashly/render_context.rb) context.
 
 ### Render script example
 
@@ -113,7 +113,7 @@ if show
 end
 ```
 
-[!button variant="primary" icon="mark-github" text="See it on GitHub"](https://github.com/DannyBen/bashly/tree/master/lib/bashly/libraries/render/markdown)
+[!button variant="primary" icon="mark-github" text="See it on GitHub"](https://github.com/bashly-framework/bashly/tree/master/lib/bashly/libraries/render/markdown)
 
 ### Custom properties
 

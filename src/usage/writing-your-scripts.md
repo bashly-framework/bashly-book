@@ -95,7 +95,7 @@ To get a starting point, you can run the convenience command:
 $ bashly add lib
 ```
 
-[!button variant="primary" icon="code-review" text="Custom Includes Example"](https://github.com/DannyBen/bashly/tree/master/examples/custom-includes#readme)
+[!button variant="primary" icon="code-review" text="Custom Includes Example"](https://github.com/bashly-framework/bashly/tree/master/examples/custom-includes#readme)
 
 ## Hooks
 

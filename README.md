@@ -1,7 +1,7 @@
 # Bashly Documentation Site
 
 This is the source for [bashly.dev](https://bashly.dev) - the
-documentation site for [bashly](https://github.com/DannyBen/bashly)
+documentation site for [bashly](https://github.com/bashly-framework/bashly)
 
 ## Development
 

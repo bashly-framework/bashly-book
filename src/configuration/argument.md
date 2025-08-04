@@ -71,7 +71,7 @@ When using [`repeatable`](#repeatable), you may provide an array here. It will
 be provided to your script as a space delimited string (similar to how it is
 provided when the user inputs values).
 
-[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
+[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/bashly-framework/bashly/tree/master/examples/default-values#readme)
 
 
 ### required
@@ -95,7 +95,7 @@ define required arguments after it.
 Limit the allowed values to a specified whitelist. Can be used in conjunction
 with [`default`](#default) or [`required`](#required).
 
-[!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
+[!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/bashly-framework/bashly/tree/master/examples/whitelist#readme)
 
 
 ### repeatable
@@ -108,7 +108,7 @@ The received value will be formatted as a quoted, space-delimited string which
 you will need to convert to array with something like
 `eval "data=(${args[path]})"`.
 
-[!button variant="primary" icon="code-review" text="Repeatable Argument Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-arg#readme)
+[!button variant="primary" icon="code-review" text="Repeatable Argument Example"](https://github.com/bashly-framework/bashly/tree/master/examples/repeatable-arg#readme)
 
 ### unique
 

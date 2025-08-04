@@ -30,7 +30,7 @@ Bashly will look for the settings file in one of these paths:
 - To specify a `null` value, use `~`
 !!!
 
-[!button variant="primary" icon="code-review" text="Settings Example"](https://github.com/DannyBen/bashly/tree/master/examples/settings#readme)
+[!button variant="primary" icon="code-review" text="Settings Example"](https://github.com/bashly-framework/bashly/tree/master/examples/settings#readme)
 
 ## Environment variables
 
@@ -102,7 +102,7 @@ In case you plan on creating a large script with many commands, it is
 recommended to enable this by setting it to something like
 `commands_dir: commands`.
 
-[!button variant="primary" icon="code-review" text="Command Paths Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-paths#readme)
+[!button variant="primary" icon="code-review" text="Command Paths Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-paths#readme)
 
 ### `partials_extension`
 
@@ -214,7 +214,7 @@ Specify if you want to show the
 [command examples](/configuration/command/#examples) whenever the user fails to 
 provide the required arguments.
 
-[!button variant="primary" icon="code-review" text="Show Examples on Error Example"](https://github.com/DannyBen/bashly/tree/master/examples/command-examples-on-error#readme)
+[!button variant="primary" icon="code-review" text="Show Examples on Error Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-examples-on-error#readme)
 
 ### `private_reveal_key`
 
@@ -230,7 +230,7 @@ When using private commands, flags, or environment variables, you may set
 this option to a name of an environment variable that, if set, will reveal
 all the private elements in the usage texts, as if they were public.
 
-[!button variant="primary" icon="code-review" text="Private Reveal Example"](https://github.com/DannyBen/bashly/tree/master/examples/private-reveal#readme)
+[!button variant="primary" icon="code-review" text="Private Reveal Example"](https://github.com/bashly-framework/bashly/tree/master/examples/private-reveal#readme)
 
 ### `usage_colors`
 
@@ -262,7 +262,7 @@ You can run `bashly add colors` to add a standard colors library.
 This option cannot be set using environment variables.
 !!!
 
-[!button variant="primary" icon="code-review" text="Usage Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors-usage#readme)
+[!button variant="primary" icon="code-review" text="Usage Colors Example"](https://github.com/bashly-framework/bashly/tree/master/examples/colors-usage#readme)
 
 ## Feature Toggles
 

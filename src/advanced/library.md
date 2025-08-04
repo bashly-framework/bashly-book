@@ -31,7 +31,7 @@ yaml_load "settings.yml" "config_"   # use prefix
 eval $(yaml_load "settings.yml")     # create variables in scope
 ````
 
-[!button variant="primary" icon="code-review" text="YAML Example on GitHub"](https://github.com/DannyBen/bashly/tree/master/examples/yaml#readme)
+[!button variant="primary" icon="code-review" text="YAML Example on GitHub"](https://github.com/bashly-framework/bashly/tree/master/examples/yaml#readme)
 
 ===
 
@@ -76,7 +76,7 @@ if config_has_key "key" ; then
 fi
 ```
 
-[!button variant="primary" icon="code-review" text="Config Example on GitHub"](https://github.com/DannyBen/bashly/tree/master/examples/config#readme)
+[!button variant="primary" icon="code-review" text="Config Example on GitHub"](https://github.com/bashly-framework/bashly/tree/master/examples/config#readme)
 
 ===
 
@@ -117,7 +117,7 @@ ini_save
 ini_show
 ```
 
-[!button variant="primary" icon="code-review" text="INI Example"](https://github.com/DannyBen/bashly/tree/master/examples/ini#readme)
+[!button variant="primary" icon="code-review" text="INI Example"](https://github.com/bashly-framework/bashly/tree/master/examples/ini#readme)
 
 ===
 
@@ -140,7 +140,7 @@ echo "before $(green_bold this is green_bold) after"
 
 See the generated script in `src/lib/colors.sh` for the full list of colors.
 
-[!button variant="primary" icon="code-review" text="Colors Example"](https://github.com/DannyBen/bashly/tree/master/examples/colors#readme)
+[!button variant="primary" icon="code-review" text="Colors Example"](https://github.com/bashly-framework/bashly/tree/master/examples/colors#readme)
 
 ===
 

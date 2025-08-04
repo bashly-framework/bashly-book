@@ -19,21 +19,21 @@ meta:
   title: " - Bashly"
 
 edit:
-  repo: https://github.com/DannyBen/bashly-book/
+  repo: https://github.com/bashly-framework/bashly-book/
   base: src
   branch: master
 
 links:
   - text: GitHub
-    link: https://github.com/DannyBen/bashly
+    link: https://github.com/bashly-framework/bashly
     icon: mark-github
     target: blank
   - text: Issues
-    link: https://github.com/DannyBen/bashly/issues
+    link: https://github.com/bashly-framework/bashly/issues
     icon: issue-opened
     target: blank
   - text: Discussions
-    link: https://github.com/DannyBen/bashly/discussions
+    link: https://github.com/bashly-framework/bashly/discussions
     icon: comment-discussion
     target: blank
 
@@ -45,11 +45,11 @@ footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
   links:
     - text: Site Source
-      link: https://github.com/DannyBen/bashly-book
+      link: https://github.com/bashly-framework/bashly-book
       target: blank
       icon: mark-github
     - text: Changelog
-      link: https://github.com/DannyBen/bashly/blob/master/CHANGELOG.md#changelog
+      link: https://github.com/bashly-framework/bashly/blob/master/CHANGELOG.md#changelog
       target: blank
       icon: log
 

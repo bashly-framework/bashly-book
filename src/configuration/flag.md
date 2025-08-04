@@ -114,7 +114,7 @@ When using [`repeatable`](#repeatable), you may provide an array here. It will
 be provided to your script as a space delimited string (similar to how it is
 provided when the user inputs values).
 
-[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/DannyBen/bashly/tree/master/examples/default-values#readme)
+[!button variant="primary" icon="code-review" text="Default Values Example"](https://github.com/bashly-framework/bashly/tree/master/examples/default-values#readme)
 
 ### required
 
@@ -134,7 +134,7 @@ with [`default`](#default) or [`required`](#required).
 
 Remember to set the [`arg`](#arg) name when using this option.
 
-[!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/DannyBen/bashly/tree/master/examples/whitelist#readme)
+[!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/bashly-framework/bashly/tree/master/examples/whitelist#readme)
 
 
 ### conflicts
@@ -149,7 +149,7 @@ The values of this array should be the long versions of the flags:
 This option should be specified on both sides of the exclusivity.
 !!!
 
-[!button variant="primary" icon="code-review" text="Conflicts Example"](https://github.com/DannyBen/bashly/tree/master/examples/conflicts#readme)
+[!button variant="primary" icon="code-review" text="Conflicts Example"](https://github.com/bashly-framework/bashly/tree/master/examples/conflicts#readme)
 
 
 ### completions
@@ -176,7 +176,7 @@ The values of this array should be the long versions of the flags:
 This option should be specified on both sides of the requirement.
 !!!
 
-[!button variant="primary" icon="code-review" text="Needy Flags Example"](https://github.com/DannyBen/bashly/tree/master/examples/needs#readme)
+[!button variant="primary" icon="code-review" text="Needy Flags Example"](https://github.com/bashly-framework/bashly/tree/master/examples/needs#readme)
 
 
 ### private
@@ -205,7 +205,7 @@ When the flag has an argument, the user can provide it in the form of
 as a quoted, space-delimited string which you will need to convert to array with
 something like `eval "data=(${args[--data]})"`.
 
-[!button variant="primary" icon="code-review" text="Repeatable Flag Example"](https://github.com/DannyBen/bashly/tree/master/examples/repeatable-flag#readme)
+[!button variant="primary" icon="code-review" text="Repeatable Flag Example"](https://github.com/bashly-framework/bashly/tree/master/examples/repeatable-flag#readme)
 
 ### unique
 

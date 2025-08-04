@@ -44,7 +44,7 @@ $ myscript something
 
 The generated script will look for an executable named `myscript-something` in the path. If found, it will be called.
 
-[!button variant="primary" icon="code-review" text="Extensible Extension Example"](https://github.com/DannyBen/bashly/tree/master/examples/extensible#readme)
+[!button variant="primary" icon="code-review" text="Extensible Extension Example"](https://github.com/bashly-framework/bashly/tree/master/examples/extensible#readme)
 
 ## Delegate mode
 
@@ -74,5 +74,5 @@ $ mygit status
 
 The generated script will execute `git status`.
 
-[!button variant="primary" icon="code-review" text="Extensible Delegate Example"](https://github.com/DannyBen/bashly/tree/master/examples/extensible-delegate#readme)
+[!button variant="primary" icon="code-review" text="Extensible Delegate Example"](https://github.com/bashly-framework/bashly/tree/master/examples/extensible-delegate#readme)
 

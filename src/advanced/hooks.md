@@ -19,7 +19,7 @@ Run `bashly add hooks` to create the hook files in your source directory.
 | `src/before.sh`     | Execute code before calling any command, but after processing the command line input. The `args` dictionary is available to you here, as well as the `input` array, which contains the normalized command line arguments.
 | `src/after.sh`      | Execute code after calling any command.
 
-[!button variant="primary" icon="code-review" text="Hooks Example"](https://github.com/DannyBen/bashly/tree/master/examples/hooks#readme)
+[!button variant="primary" icon="code-review" text="Hooks Example"](https://github.com/bashly-framework/bashly/tree/master/examples/hooks#readme)
 
 ## Alternatives
 

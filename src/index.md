@@ -22,12 +22,12 @@ language.
 
 1. You provide a YAML configuration file, describing commands, subcommands,
    arguments, and flags. Running `bashly init` creates an initial sample YAML
-   file for you ([example](https://github.com/DannyBen/bashly/tree/master/examples/minimal#bashlyyml)).
+   file for you ([example](https://github.com/bashly-framework/bashly/tree/master/examples/minimal#bashlyyml)).
 2. Bashly then automatically generates a bash script (when you run
    `bashly generate`) that can parse and validate user input, provide help
    messages, and run your code for each command.
 3. Your code for each command is kept in a separate file, and can be merged
-   again if you change it ([example](https://github.com/DannyBen/bashly/blob/master/examples/minimal/src/root_command.sh)).
+   again if you change it ([example](https://github.com/bashly-framework/bashly/blob/master/examples/minimal/src/root_command.sh)).
 
 ## Features
 

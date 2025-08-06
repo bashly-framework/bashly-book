@@ -306,7 +306,7 @@ enable_bash3_bouncer: always
 ```
 
 Specify if you wish to render the piece of code that aborts the script execution
-when bash version is < 4.
+when bash version is < 4.2.
 
 ### `enable_view_markers`
 

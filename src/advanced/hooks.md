@@ -19,8 +19,8 @@ Run `bashly add hooks` to create the hook files in your source directory.
 ### `src/initialize.sh`
 
 Execute code inside the `initialize()` function, which is called before anything
-else. The `command_line` array is available to you here, allowing you to read
-or modify (not recommended) the input command line.
+else. The `command_line_args` array is available to you here, allowing you to
+read or modify (not recommended) the input command line.
 
 ### `src/before.sh`
 

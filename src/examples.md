@@ -54,6 +54,7 @@ All examples are listed below for convenience.
 - [key-value-pairs](https://github.com/bashly-framework/bashly/tree/master/examples/key-value-pairs#readme) - parsing key=value arguments and flags
 - [command-examples-on-error](https://github.com/bashly-framework/bashly/tree/master/examples/command-examples-on-error#readme) - showing examples on error
 - [internal-run](https://github.com/bashly-framework/bashly/tree/master/examples/internal-run#readme) - calling other commands internally
+- [command-line-manipulation](https://github.com/bashly-framework/bashly/tree/master/examples/command-line-manipulation#readme) - read or modify the raw command line
 
 ## Customization
 

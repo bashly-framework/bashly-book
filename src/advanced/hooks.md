@@ -13,13 +13,26 @@ own code. To use a hook, simply create one of the files listed below in your
 Run `bashly add hooks` to create the hook files in your source directory.
 !!!
 
-| Hook File           | Description
-|---------------------|---------------
-| `src/initialize.sh` | Execute code inside the `initialize()` function, which is called before anything else.
-| `src/before.sh`     | Execute code before calling any command, but after processing the command line input.
-| `src/after.sh`      | Execute code after calling any command.
+## Hook Files
 
-[!button variant="primary" icon="code-review" text="Hooks Example"](https://github.com/bashly-framework/bashly/tree/master/examples/hooks#readme)
+
+### `src/initialize.sh`
+
+Execute code inside the `initialize()` function, which is called before anything
+else. The `command_line_args` array is available to you here, allowing you to
+read or modify (not recommended) the input command line.
+
+### `src/before.sh`
+
+Execute code before calling any command, but after processing the command line
+input. The `args` and `extra_args` arrays are available to you here, as well as
+the `input` array, which contains the normalized command line arguments.
+
+### `src/after.sh`
+
+Execute code after calling any command.
+
+[!button variant="primary" icon="code-review" text="Hooks Example"](https://github.com/bashly-framework/bashly/tree/master/examples/hooks#readme) [!button variant="primary" icon="code-review" text="Command Line Manipulation Example"](https://github.com/bashly-framework/bashly/tree/master/examples/command-line-manipulation#readme)
 
 ## Alternatives
 

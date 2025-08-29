@@ -8,8 +8,8 @@ order: 80
 Bashly supports custom validation functions for your arguments, flag
 arguments, and environment variables. This is how it works:
 
-1. In your bashly configuration file, arguments and flags (with arguments)
-   may have a `validate: function_name` option.
+1. In your bashly configuration file, arguments, flags (with arguments) and
+   environment variables may have a `validate: function_name` option.
 2. Whenever you run your script, it will look for a function with that name,
    prefixed by `validate_` and will run it before allowing the user
    input to pass.
@@ -35,6 +35,11 @@ validate_file_exists() {
 ```
 
 +++
+
+!!!success Tip
+You may specify multiple validation functions by supplying an array: 
+`validate: [file_exists, file_is_writable]`
+!!!
 
 
 ## Built-in Custom Validations

@@ -3,8 +3,8 @@
   "short_name": "Bashly",
   "description": "Bash Command Line Framework",
   "start_url": "/",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#434343",
+  "background_color": "#888888",
   "icons": [
     { "src": "/assets/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "/assets/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }

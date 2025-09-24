@@ -25,6 +25,20 @@ Bashly will look for the settings file in one of these paths:
 - A file named `bashly-settings.yml` in the working directory.
 - A file named `settings.yml` in the working directory.
 
+### Environment Overrides
+
+All options in the settings file (except `env`) may be specified with an
+environment suffix in order to override its value for a given environment
+(`production` or `development`).
+
+For example, when defining `formatter_production: shfmt --minify`, then 
+this will be the formatter used when generating the script with
+`bashly generate --env production`.
+
+Since these values take precedence over the standard values, you can define
+both (i.e. `formatter: shfmt` and `formatter_production: shfmt --minify`).
+
+
 !!!success YAML Tips
 - The words `yes` and `no` are equivalent to `true` and `false`
 - To specify a `null` value, use `~`
@@ -36,12 +50,14 @@ Bashly will look for the settings file in one of these paths:
 
 All settings are optional (with their default values provided below), and
 can also be set with an environment variable with the same name, capitalized
-and prefixed by `BASHLY_` - for example: `BASHLY_SOURCE_DIR`
+and prefixed by `BASHLY_` - for example: `BASHLY_SOURCE_DIR` environment
+variable is the same as specifying `source_dir` in the settings file.
 
 When setting environment variables, you can use:
 
 - `0`, `false` or `no` to represent false
 - `1`, `true` or `yes` to represent true
+
 
 ## Path Options
 

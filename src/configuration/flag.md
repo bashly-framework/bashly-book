@@ -219,7 +219,7 @@ specified.
 
 ### validate
 
-[!badge String]
+[!badge String / Array of Strings]
 
 Apply a custom validation function.
 

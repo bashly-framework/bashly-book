@@ -7,7 +7,7 @@ order: 30
 
 ## Overview
 
-Bashly is capable of importing library functions from a custom **external source**  
+Bashly is capable of importing library functions from a custom **external source**
 (not built into Bashly itself) using the `bashly add --source NAME ...` command.
 
 A libraries source can be:
@@ -107,6 +107,28 @@ installation.
 Explore bashly’s [built-in libraries](https://github.com/bashly-framework/bashly/tree/master/lib/bashly/libraries) 
 for practical examples you can reuse or adapt.
 !!!
+
+
+## Organizing your functions
+
+You are free to split or group functions in your custom library however it makes sense for your project.  
+
+
+### Single concern :icon-arrow-right: single file
+
+If several functions work together on the same concern, you can keep them in a single file.  
+
+[!button variant="primary" icon="code-review" text="Example: config library"](https://github.com/bashly-framework/bashly/blob/master/lib/bashly/libraries/config/config.sh)
+
+
+
+### Single function :icon-arrow-right: single file
+
+If functions are unrelated, you can place each in its own file (and even in subdirectories).  
+
+[!button variant="primary" icon="code-review" text="Example: validations library"](https://github.com/bashly-framework/bashly/tree/master/lib/bashly/libraries/validations)
+
+When you run `bashly generate`, Bashly automatically includes every `.sh` file in your library folder (including subdirectories). This is what makes both styles possible.  
 
 
 ## Auto-upgrade

@@ -54,13 +54,15 @@ config:
 
 ### `help`
 
-[!badge Required]
+[!badge String]
+[!badge variant="danger" text="Required"]
 
 The message to show when running `bashly add --source NAME --list`
 
 ### `files`
 
-[!badge Required]
+[!badge Array of Dictionaries]
+[!badge variant="danger" text="Required"]
 
 An array of `source` + `target` paths of files to copy when adding this library.
 
@@ -74,6 +76,7 @@ An array of `source` + `target` paths of files to copy when adding this library.
 
 ### `post_install_message`
 
+[!badge String]
 [!badge Optional]
 
 An optional message to show after the user installs the library. You can use a 
@@ -91,6 +94,18 @@ post_install_message: |
 
   Docs: bu`https://github.com/DannyBen/approvals.bash`
 ```
+
+### `skip_src_check`
+
+[!badge Boolean]
+[!badge Optional]
+
+Set `skip_src_check: true` if your library’s `target` files are **not** meant to
+be placed in the user's `src` directory.  
+
+This disables the automatic check for the existence of that directory during
+installation.
+
 
 !!!success Tip
 Explore bashly’s [built-in libraries](https://github.com/bashly-framework/bashly/tree/master/lib/bashly/libraries) 
@@ -124,4 +139,5 @@ with the full marker when the library is added:
 The `##` marker is recommended since it creates a 
 [hidden comment](/usage/writing-your-scripts/#hidden-comments) that will not
 appear in the final generated bash script.  
+
 If you prefer the marker to remain visible, you may use a single `#` instead.

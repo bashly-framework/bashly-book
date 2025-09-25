@@ -63,16 +63,14 @@ Most properties are optional, unless specified otherwise.
 
 ### name
 
-[!badge String]
-[!badge variant="danger" text="Required"]
+[!badge String] [!badge variant="danger" text="Required"]
 
 The name of the script or subcommand.
 
 
 ### alias
 
-[!badge String / Array of Strings]
-[!badge variant="warning" text="Subcommands Only"]
+[!badge String / Array of Strings] [!badge variant="warning" text="Subcommands Only"]
 
 One or more additional optional names for this command. This can be used to
 create a shortcut for a command, or provide alternative names for it.
@@ -147,8 +145,7 @@ Using `commands` on a given command implies that this command does not have flag
 
 ### version
 
-[!badge String]
-[!badge variant="warning" text="Root Command Only"]
+[!badge String] [!badge variant="warning" text="Root Command Only"]
 
 The string to display when using `--version`.
 
@@ -159,8 +156,7 @@ The string to display when using `--version`.
 
 ### default
 
-[!badge Boolean / String]
-[!badge variant="warning" text="Subcommands Only"]
+[!badge Boolean / String] [!badge variant="warning" text="Subcommands Only"]
 
 - Setting this to `true` on any command, will cause any **unrecognized**
   command line to be passed to this command.
@@ -199,8 +195,7 @@ Add a custom message that will be displayed at the end of the `--help` text.
 
 ### group
 
-[!badge String]
-[!badge variant="warning" text="Subcommands Only"]
+[!badge String] [!badge variant="warning" text="Subcommands Only"]
 
 In case you have many commands, use this option to specify a caption to display
 before this command.
@@ -272,8 +267,7 @@ with the `--help` option.
 
 ### expose
 
-[!badge Boolean / String]
-[!badge variant="warning" text="Subcommands Only"]
+[!badge Boolean / String] [!badge variant="warning" text="Subcommands Only"]
 
 Setting this to `true` or `always` on any command that has subcommands, will
 show its subcommands in the help or usage text of the parent command.
@@ -291,8 +285,7 @@ in a logical, visual grouping.
 
 ### extensible
 
-[!badge Boolean / String]
-[!badge variant="warning" text="Root Command Only"]
+[!badge Boolean / String] [!badge variant="warning" text="Root Command Only"]
 
 Specify that this command can be extended by external means.
 
@@ -352,8 +345,7 @@ as a "last resort" mechanism to help in solving more complex scenarios.
 
 ### private
 
-[!badge Boolean]
-[!badge variant="warning" text="Subcommands Only"]
+[!badge Boolean] [!badge variant="warning" text="Subcommands Only"]
 
 Setting this to `true` on any command, will hide it from the command list.
 

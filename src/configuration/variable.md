@@ -48,8 +48,7 @@ within those specific commands.
 
 ### name
 
-[!badge String]
-[!badge variant="danger" text="Required"]
+[!badge String] [!badge variant="danger" text="Required"]
 
 The name of the variable.
 

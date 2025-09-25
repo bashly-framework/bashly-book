@@ -52,8 +52,7 @@ These options are valid when using the explicit hash syntax.
 
 ### command
 
-[!badge Array of Strings]
-[!badge variant="danger" text="Required"]
+[!badge Array of Strings] [!badge variant="danger" text="Required"]
 
 One or more commands that are required by your script. If more than one is
 provided, the dependency will be considered as satisfied if any of the commands

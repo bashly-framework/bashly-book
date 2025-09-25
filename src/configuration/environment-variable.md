@@ -40,8 +40,7 @@ Most properties are optional, unless specified otherwise.
 
 ### name
 
-[!badge String]
-[!badge variant="danger" text="Required"]
+[!badge String] [!badge variant="danger" text="Required"]
 
 The name of the variable. Use a lowercase name, it will be automatically
 capitalized wherever needed.

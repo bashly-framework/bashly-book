@@ -54,15 +54,13 @@ config:
 
 ### `help`
 
-[!badge String]
-[!badge variant="danger" text="Required"]
+[!badge String] [!badge variant="danger" text="Required"]
 
 The message to show when running `bashly add --source NAME --list`
 
 ### `files`
 
-[!badge Array of Dictionaries]
-[!badge variant="danger" text="Required"]
+[!badge Array of Dictionaries] [!badge variant="danger" text="Required"]
 
 An array of `source` + `target` paths of files to copy when adding this library.
 
@@ -77,7 +75,6 @@ An array of `source` + `target` paths of files to copy when adding this library.
 ### `post_install_message`
 
 [!badge String]
-[!badge Optional]
 
 An optional message to show after the user installs the library. You can use a 
 multi-line YAML string here, and use color markers as specified by the
@@ -98,7 +95,6 @@ post_install_message: |
 ### `skip_src_check`
 
 [!badge Boolean]
-[!badge Optional]
 
 Set `skip_src_check: true` if your library’s `target` files are **not** meant to
 be placed in the user's `src` directory.  

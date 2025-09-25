@@ -62,16 +62,14 @@ Most properties are optional, unless specified otherwise.
 
 ### long
 
-[!badge String]
-[!badge variant="danger" text="Required (unless short is provided)"]
+[!badge String] [!badge variant="danger" text="Required (unless short is provided)"]
 
 The long form of the flag, including the `--` prefix.
 
 
 ### short
 
-[!badge String]
-[!badge variant="danger" text="Required (unless long is provided)"]
+[!badge String] [!badge variant="danger" text="Required (unless long is provided)"]
 
 The short form of the flag, including the `-` prefix.
 

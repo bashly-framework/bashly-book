@@ -40,8 +40,7 @@ Most properties are optional, unless specified otherwise.
 
 ### name
 
-[!badge String]
-[!badge variant="danger" text="Required"]
+[!badge String] [!badge variant="danger" text="Required"]
 
 The name of the argument. Use lowercase letters, since it serves multiple
 purposes:

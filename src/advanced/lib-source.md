@@ -7,10 +7,10 @@ order: 30
 
 ## Overview
 
-Bashly is capable of importing external library functions from a custom central
-libraries source using the `bashly add --source NAME ...` command.
+Bashly is capable of importing library functions from a custom **external source**  
+(not built into Bashly itself) using the `bashly add --source NAME ...` command.
 
-These external library sources can be:
+A libraries source can be:
 
 1. A local path
 2. A remote git repository
@@ -23,10 +23,16 @@ This can be useful if:
 2. You wish to create a public source for libraries for bashly.
 3. You wish to create a private shareable libraries source for your organization.
 
+!!!success Tip
+Kickstart your own libraries source with the  
+[Custom Libraries Template](https://github.com/bashly-framework/custom-libs-template).
+!!!
+
 ## Specifications
 
-The external library source must have a `libraries.yml` file describing the 
-libraries it provides. A typical `libraries.yml` file looks like this:
+The external libraries source must have a `libraries.yml` file in its root
+directory describing the libraries it provides. A typical `libraries.yml` file
+looks like this:
 
 ```yaml
 colors:
@@ -48,13 +54,17 @@ config:
 
 ### `help`
 
+[!badge Required]
+
 The message to show when running `bashly add --source NAME --list`
 
 ### `files`
 
+[!badge Required]
+
 An array of `source` + `target` paths of files to copy when adding this library.
 
-- `source` is relative to the root of the library source.
+- `source` is relative to the root of the libraries source.
 - `target` is relative to the current directory, and you can use any of these
   tokens in the path:
   - `%{user_source_dir}` - path to the user's source directory (normally `./src`).
@@ -64,9 +74,11 @@ An array of `source` + `target` paths of files to copy when adding this library.
 
 ### `post_install_message`
 
+[!badge Optional]
+
 An optional message to show after the user installs the library. You can use a 
 multi-line YAML string here, and use color markers as specified by the
-[Colsole](https://github.com/dannyben/colsole#colors) gem. 
+[Colsole](https://github.com/dannyben/colsole#colors) gem (already bundled with Bashly). 
 
 In the below example, ``g`...` `` means green, ``m`...` `` magenta, and 
 ``bu`...` `` blue underlined:
@@ -79,6 +91,12 @@ post_install_message: |
 
   Docs: bu`https://github.com/DannyBen/approvals.bash`
 ```
+
+!!!success Tip
+Explore bashly’s [built-in libraries](https://github.com/bashly-framework/bashly/tree/master/lib/bashly/libraries) 
+for practical examples you can reuse or adapt.
+!!!
+
 
 ## Auto-upgrade
 
@@ -103,6 +121,7 @@ with the full marker when the library is added:
 ## [@bashly-upgrade]
 ```
 
-The double-hash comment marker is optional, and denotes a
-[hidden comment](/usage/writing-your-scripts/#hidden-comments), which will not
-appear in the final generated bash script.
+The `##` marker is recommended since it creates a 
+[hidden comment](/usage/writing-your-scripts/#hidden-comments) that will not
+appear in the final generated bash script.  
+If you prefer the marker to remain visible, you may use a single `#` instead.

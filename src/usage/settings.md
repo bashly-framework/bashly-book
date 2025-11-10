@@ -98,6 +98,24 @@ lib_dir: lib
 
 Set the path to use for common library files, relative to `source_dir`.
 
+### `extra_lib_dirs`
+
+```yaml
+# default
+extra_lib_dirs: ~
+
+# examples
+extra_lib_dirs: common
+extra_lib_dirs: [common, ../org_lib]
+extra_lib_dirs: "common, ../org_lib"
+```
+
+Set additional one or more paths to use for common library files, relative to
+the working directory, or as absolute paths. This option can be provided as
+an array, a string, or a comma delimited string.
+
+[!button variant="primary" icon="code-review" text="Multiple Lib Dirs Example"](https://github.com/bashly-framework/bashly/tree/master/examples/multiple-lib-dirs#readme)
+
 ### `commands_dir`
 
 ```yaml

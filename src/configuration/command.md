@@ -223,12 +223,27 @@ flags.
 
 It can be set in one of three ways:
 
-- Set to `true` to just enable it.
-- Set to a string, to show this string in the usage help text.
-- Set to a hash containing `label`, `help` and `required` keys, to show a
-  detailed help for it when running with `--help`. By default, `catch_all`
-  arguments are optional, but you can specify `required: true` to require at
-  least one argument.
++++ Boolean
+```yaml
+# Enable catch all
+# Default: false
+catch_all: true  
+```
++++ String
+```yaml
+# Enable catch all and use this string in the usage text
+catch_all: docker_params
+```
++++ Hash
+```yaml
+# Configure all aspects of this feature.
+catch_all:
+  label: params            # usage label
+  help: Docker parameters  # help text
+  required: true           # require at least one parameter
+  catch_help: true         # also catch `--help/-h` as any other parameter
+```
++++
 
 To access arguments captured by `catch_all` in your script, use the
 `$other_args` array (or call the `inspect_args` command to see them).

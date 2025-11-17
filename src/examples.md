@@ -69,6 +69,7 @@ All examples are listed below for convenience.
 - [command-paths](https://github.com/bashly-framework/bashly/tree/master/examples/command-paths#readme) - configuring nested paths for your source scripts
 - [command-function](https://github.com/bashly-framework/bashly/tree/master/examples/command-function#readme) - configuring custom internal function names
 - [split-config](https://github.com/bashly-framework/bashly/tree/master/examples/split-config#readme) - splitting your `bashly.yml` into several smaller files
+- [multiple-lib-dirs](https://github.com/bashly-framework/bashly/tree/master/examples/multiple-lib-dirs#readme) - loading libraries from multiple locations
 
 ## Bashly library features
 

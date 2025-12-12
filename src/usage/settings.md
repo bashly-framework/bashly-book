@@ -185,6 +185,17 @@ Specify the indentation style of the generated script.
 - `tab_indent: true` - Indent with Tab (every 2 leading spaces will be converted
    to a tab character).
 
+
+### `word_wrap`
+
+```yaml
+# default
+word_wrap: 80
+```
+
+Specify the number of characters used to wrap help and example messages.
+
+
 ### `formatter`
 
 ```yaml

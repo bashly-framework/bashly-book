@@ -5,8 +5,8 @@ order: 80
 
 # Settings
 
-Some of bashly's commands can be tweaked through the use of environment
-variables, or a settings file.
+Some of bashly's behavior and output can be tweaked through the use of
+environment variables, or a settings file.
 
 ## Settings file
 
@@ -410,6 +410,33 @@ enable_sourcing: development
 
 Specify if you want the generated script to include a condition that checks if
 the script was sourced and only execute it if it is not.
+
+## Developer Options
+
+### `watch_evented`
+
+```yaml
+# default
+watch_evented: false
+```
+
+Enable evented file watching for the `bashly generate --watch` command.
+
+Evented file watching is more efficient than polling, but may not work reliably
+in some environments or operating systems (for example, network file systems or
+containerized environments). By default, this option is disabled, causing the
+file watcher to use polling instead.
+
+### `watch_latency`
+
+```yaml
+# default
+watch_latency: 1.0
+```
+
+Set the file watcher latency (in seconds) for the `bashly generate --watch`
+command.
+
 
 ## Scripting Options
 

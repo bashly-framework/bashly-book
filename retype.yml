@@ -1,6 +1,7 @@
 input: src
 output: docs
 url: bashly.dev
+favicon: favicon.ico
 
 serve:
   host: 0.0.0.0

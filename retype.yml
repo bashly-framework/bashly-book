@@ -14,7 +14,7 @@ editor:
 branding:
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
-  label: v1.3.6
+  label: v1.3.7
   logoWidth: 143
   logoHeight: 40
 

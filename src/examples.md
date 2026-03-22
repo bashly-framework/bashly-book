@@ -50,6 +50,7 @@ All examples are listed below for convenience.
 - [private-reveal](https://github.com/bashly-framework/bashly/tree/master/examples/private-reveal#readme) - allowing users to reveal private commands, flags or environment variables
 - [stdin](https://github.com/bashly-framework/bashly/tree/master/examples/stdin#readme) - reading input from stdin
 - [filters](https://github.com/bashly-framework/bashly/tree/master/examples/filters#readme) - preventing commands from running unless custom conditions are met
+- [argfile](https://github.com/bashly-framework/bashly/tree/master/examples/argfile#readme) - auto-load arguments from a file
 - [commands-expose](https://github.com/bashly-framework/bashly/tree/master/examples/commands-expose#readme) - showing subcommands in the parent's help
 - [key-value-pairs](https://github.com/bashly-framework/bashly/tree/master/examples/key-value-pairs#readme) - parsing key=value arguments and flags
 - [command-examples-on-error](https://github.com/bashly-framework/bashly/tree/master/examples/command-examples-on-error#readme) - showing examples on error

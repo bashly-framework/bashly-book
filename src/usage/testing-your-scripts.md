@@ -21,30 +21,16 @@ spaces, and case indentation rules:
 $ shfmt --diff --case-indent --indent 2 yourscript
 ```
 
-## Approval Testing
+## Testing Frameworks
 
-!!!success Tip
-Run `bashly add test` to add a `test` folder to your project, with the 
-Approvals.bash framework.
-!!!
+When your scripts grow more elaborate, you can test them with any Bash testing
+framework you prefer.
 
-In cases where your scripts are more elaborate, or when you wish to ensure
-your scripts behave as expected, you can use any bash testing framework to test
-your scripts.
+One advantage of Bashly projects is that user-developed logic usually lives in
+separate files under `src`. This makes it easier to test only the unit under
+test by sourcing the relevant file directly, instead of invoking the entire
+generated script for every test.
 
-One such lightweight framework is
-[Approvals.bash](https://github.com/dannyben/approvals.bash#readme), which lets
-you test any command in your script and prompts you for interactive approval
-of its output. Whenever the output changes, you will be prompted again to approve it.
-
-A sample test script looks like this:
-
-```bash
-#!/usr/bin/env bash
-source approvals.bash
-
-approve "your-cli --help"
-approve "your-cli command --arg"
-# ... more tests
-```
-
+This approach works well for unit tests around helper functions, command logic,
+and edge cases, while higher-level integration tests can still exercise the
+generated CLI as an end user would.

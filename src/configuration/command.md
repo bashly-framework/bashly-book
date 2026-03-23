@@ -218,34 +218,33 @@ Specify an array of variables that can be accessed globally in your script, or s
 
 [!badge String]
 
-Specify a file to load additional arguments and flags from before parsing the
-actual command line.
+Specify a file to load default flags from before parsing the actual command
+line.
 
 If the file does not exist, it is ignored.
 
-This is useful for keeping default arguments in a file while still allowing
-explicit CLI arguments to override them.
+The path is resolved relative to the current working directory, in the same way
+your generated script is invoked. For example, `argfile: .mycli` means "look
+for a file named `.mycli` in the current working directory".
+
+This is useful for keeping default flags in a file while still allowing
+explicit CLI flags to override them.
 
 The argfile format is intentionally simple:
 
-- Empty lines are ignored
-- Lines starting with `#` are ignored
-- Each other line becomes one argument
-- A flag and value can be written on one line or on two lines
+- Only lines that start with `-` or `--` are considered
+- Non-flag lines are ignored
+- Unknown flags are ignored
+- A flag value must appear on the same line as the flag
 - Matching outer quotes are stripped
 
 Example argfile:
 
 ```bash .download
 --force
+# Value on the same line works with or without quotes
 --debug
-
-# These are all equivalent:
 --output some file
-
---output
-some file
-
 --output "some file"
 ```
 

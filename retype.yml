@@ -12,11 +12,11 @@ editor:
   enabled: true
 
 branding:
+  label: v1.3.8
   logo: assets/logo.svg
   logoDark: assets/logo-dark.svg
-  label: v1.3.8
-  logoWidth: 143
-  logoHeight: 40
+  # logoWidth: 143
+  # logoHeight: 40
 
 meta:
   title: " - Bashly"

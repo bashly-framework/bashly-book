@@ -1,4 +1,7 @@
 /cache
 /docs
 /tmp
+node_modules
+package-lock.json
+package.json
 retype.manifest

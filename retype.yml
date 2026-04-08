@@ -60,6 +60,12 @@ footer:
       target: blank
       icon: log
 
+actions:
+  items:
+    - text: Copy page
+      action: copy-page-markdown
+      icon: copy
+
 # Add {{ nowrap }} after `...` to prevent line break
 # ref: https://github.com/retypeapp/retype/issues/509
 # data:

@@ -83,6 +83,20 @@ downloading a with --force
 
 +++
 
+### Passing values that start with a hyphen
+
+Bashly supports `--` as the end-of-options delimiter. On commands without
+[`catch_all`](/configuration/command/#catch_all), it stops option parsing and
+allows subsequent values to be used as positional arguments, even when they
+start with `-`.
+
+```shell
+$ ./download --force -- -source.txt -target.txt
+```
+
+Here, `--force` is parsed as a flag, while `-source.txt` and `-target.txt` are
+parsed as positional arguments. The `--` delimiter itself is not included.
+
 ## Adding common functions
 
 In case you wish to add functions that can be used from multiple locations in

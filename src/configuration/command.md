@@ -288,6 +288,13 @@ catch_all:
 To access arguments captured by `catch_all` in your script, use the
 `$other_args` array (or call the `inspect_args` command to see them).
 
+!!! Note
+When `catch_all` is enabled, `--` sends every subsequent value directly to
+`$other_args`, even when optional positional arguments are still unassigned.
+It does not resume positional argument parsing as it does on commands without
+`catch_all`.
+!!!
+
 [!button variant="primary" icon="code-review" text="Catch All Example"](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all#readme) [!button variant="primary" icon="code-review" text="Catch All Advanced Example"](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all-advanced#readme)
 
 

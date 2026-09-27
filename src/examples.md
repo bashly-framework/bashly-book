@@ -32,9 +32,11 @@ All examples are listed below for convenience.
 - [default-values](https://github.com/bashly-framework/bashly/tree/master/examples/default-values#readme) - arguments and flags with default values
 - [minus-v](https://github.com/bashly-framework/bashly/tree/master/examples/minus-v#readme) - using `-v` and `-h` in your script
 - [multiline](https://github.com/bashly-framework/bashly/tree/master/examples/multiline#readme) - help messages with multiple lines
+- [completions](https://github.com/bashly-framework/bashly/tree/master/examples/completions#readme) - exposing runtime shell completions
 
 ## Advanced configuration features
 
+- [completions-advanced](https://github.com/bashly-framework/bashly/tree/master/examples/completions-advanced#readme) - configuring static, dynamic, and option-based runtime completions
 - [catch-all](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all#readme) - a command that can receive an arbitrary number of arguments
 - [catch-all-advanced](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all-advanced#readme) - another example for the `catch_all` option
 - [catch-all-stdin](https://github.com/bashly-framework/bashly/tree/master/examples/catch-all-stdin#readme) - combining `catch_all` with `stdin` to read multiple files
@@ -78,7 +80,6 @@ All examples are listed below for convenience.
 - [ini](https://github.com/bashly-framework/bashly/tree/master/examples/ini#readme) - using the ini library for direct, low level access to INI files
 - [yaml](https://github.com/bashly-framework/bashly/tree/master/examples/yaml#readme) - using the YAML reading functions
 - [colors](https://github.com/bashly-framework/bashly/tree/master/examples/colors#readme) - using the color print feature
-- [completions](https://github.com/bashly-framework/bashly/tree/master/examples/completions#readme) - adding bash completion functionality
 - [validations](https://github.com/bashly-framework/bashly/tree/master/examples/validations#readme) - adding validation functions for arguments, flags or environment variables
 - [hooks](https://github.com/bashly-framework/bashly/tree/master/examples/hooks#readme) - adding before/after hooks
 - [stacktrace](https://github.com/bashly-framework/bashly/tree/master/examples/stacktrace#readme) - adding stacktrace on error

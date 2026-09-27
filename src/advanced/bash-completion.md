@@ -3,125 +3,187 @@ icon: dot
 order: 60
 ---
 
-# Bash Completion
+# Runtime Completions
 
-Bashly comes with a built-in bash completions generator, provided by the
-[completely][completely] gem.
+Bashly can generate native runtime completions for your application. The
+generated completion script suggests commands, aliases, flags, positional
+arguments with `allowed` values, and flag arguments with `allowed` values.
 
-By running `bashly add completions`, you can add this functionality to your
-script in one of three ways:
+Runtime completions are disabled by default. Bashly provides adapters for Bash
+and Zsh.
 
+## Enable runtime completions
 
-==- `bashly add completions`
-Creates a function in your `./src/lib` directory that echoes a completion
-script. You can then call this function from any command (for example `yourcli
-completions`) and your users will be able to install the completions by running
-`eval "$(yourcli completions)"`.
+Enable the runtime engine and all available shell adapters in your Bashly
+settings file:
 
-==- `bashly add completions_script`
-Creates a standalone completions script that can be sourced or copied to the
-system's bash completions directory.
+```yaml settings.yml
+completions: full
+```
 
-==- `bashly add completions_yaml`
-Creates the raw data YAML file. This is intended mainly for development
-purposes.
-
-===
-
-The bash completions generation is **completely automatic**, but you will have
-to regenerate the completion function whenever you make changes to your
-`bashly.yml` file. 
-
-!!!success Tip
-By running `bashly generate --upgrade`, your completions function 
-(generated with `bashly add completions`) will be regenerated.
-!!!
-
-## Custom argument completions
-
-In addition to the automatic suggestion of subcommands and flags, you can
-instruct bashly to also suggest files, directories, users, git branches and
-more.
-
-For positional arguments, add `completions` to the argument that should receive
-these suggestions:
+Add a command that users can call to generate the completion script:
 
 ```yaml bashly.yml
 commands:
-- name: upload
-  help: Upload a file
+- name: completions
+  help: Generate a shell completion script
   args:
-  - name: source
-    help: File to upload
-    required: true
-    completions:
-    - <file>
-    - <directory>
-    - $(git branch 2> /dev/null)
-
+  - name: shell
+    help: Shell to generate completions for
+    allowed: [bash, zsh]
+    default: bash
 ```
 
-The `completions` option is still supported on commands as a fallback for
-positional arguments, but it is discouraged for new configurations. Prefer
-placing completions directly on the relevant `args` entry.
+In the command handler, call `send_completions` with the requested shell:
 
-## Custom flag completions
-
-For flag values, add `completions` to flags that have an `arg`. Similarly to
-the `allowed` option for arguments and flags, the allowed list is added to the
-suggestions automatically (without the need to use `completions`).
-
-```yaml bashly.yml
-commands:
-- name: login
-  help: Login to SETI
-  flags:
-  - long: --user
-    arg: username
-    completions:
-    - <user>
-  - long: --protocol
-    arg: protocol
-    allowed:
-      - ssh
-      - telnet
+```bash src/completions_command.sh
+send_completions "${args[shell]}"
 ```
 
-- Anything between `<...>` will be added using the `compgen -A action` flag.
-- Anything else will be appended to the `compgen -W` flag.
-
-!!! Note
-In case you are using the
-[Argument `allowed` option](../configuration/argument.md#allowed) or 
-the [Flag argument `allowed` option](../configuration/flag.md#allowed),
-these will be automatically added to the completions list as well.
-!!!
-
-## Completions in ZSH
-
-If you are using Oh-My-Zsh, bash completions should already be enabled,
-otherwise, you should enable completion by adding this to your `~/.zshrc`
-(if it is not already there):
+After regenerating your application, users can load its completion script in
+their shell:
 
 ```bash
-# Load completion functions
-autoload -Uz +X compinit && compinit
-autoload -Uz +X bashcompinit && bashcompinit
+# Bash
+source <(cli completions bash)
+
+# Zsh
+source <(cli completions zsh)
 ```
 
-After adding this (and restarting your session), you should be able to source
-any bash completion script in zsh.
+Replace `cli` with the name or path of your generated application.
 
-## Additional documentation
+[!button variant="primary" icon="code-review" text="Runtime Completions Example"](https://github.com/bashly-framework/bashly/tree/master/examples/completions#readme)
 
-For more information about these custom completions, see the
-[documentation for the completely gem][completely-docs].
+## Configure completion candidates
 
-## Example
+In addition to the candidates Bashly generates automatically, you can
+configure custom completions for positional arguments and flags that have an
+`arg`.
 
-[!button variant="primary" icon="code-review" text="Bash Completions Example"](https://github.com/bashly-framework/bashly/tree/master/examples/completions#readme)
+The `completions` mapping accepts three optional keys:
 
+- `static`: literal completion candidates.
+- `dynamic`: Bash commands that print completion candidates.
+- `options`: completion behavior and filesystem candidate sources.
 
-[completely]: https://github.com/DannyBen/completely
-[completely-docs]: https://github.com/DannyBen/completely#suggesting-files-directories-and-other-bash-built-ins
-[compgen]: https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html
+### Static candidates
+
+Use `static` for literal suggestions:
+
+```yaml bashly.yml
+args:
+- name: environment
+  help: Environment to deploy to
+  completions:
+    static:
+      - staging
+      - production
+```
+
+!!! Note
+Use [`allowed`](/configuration/argument/#allowed) when values should be
+validated. Use `completions.static` when they should only be suggested.
+Values configured with `allowed` are suggested automatically.
+!!!
+
+### Dynamic candidates
+
+Use `dynamic` to run external commands or Bash functions included in your
+generated application:
+
+```yaml bashly.yml
+args:
+- name: branch
+  help: Branch to deploy
+  completions:
+    dynamic:
+      - git branch --format='%(refname:short)'
+      - completion_branches
+```
+
+Each command or function must print one candidate per line to standard output.
+A producer that fails contributes no candidates. Its failure and error output
+do not fail or pollute the overall completion request.
+
+!!! Note
+Dynamic entries run whenever the user requests a completion. Keep them fast
+and side-effect free.
+!!!
+
+### Completion options
+
+Use `options` to add filesystem candidates or change how an inserted
+completion behaves:
+
+```yaml bashly.yml
+flags:
+- long: --config
+  arg: file
+  help: Configuration file
+  completions:
+    options: [files]
+
+- long: --directory
+  arg: path
+  help: Working directory
+  completions:
+    options: [directories]
+```
+
+The supported options are:
+
+- `files`: add file and directory candidates.
+- `directories`: add directory candidates only.
+- `no-space`: do not append a space after inserting a completion.
+
+Filesystem completion is not implicit. Without `files` or `directories`, the
+shell uses only candidates returned by Bashly.
+
+Normal spacing is the default. Use `no-space` only when the user should
+continue typing immediately after the inserted candidate. Candidate
+de-duplication is always enabled and is not configurable.
+
+## Combine completion sources
+
+You can combine `static`, `dynamic`, and `options` on the same argument or
+flag:
+
+```yaml bashly.yml
+args:
+- name: environment
+  help: Environment to deploy to
+  completions:
+    static: [staging, production]
+    dynamic: [completion_environments]
+    options: [no-space]
+```
+
+## Test completion candidates
+
+The generated application includes an internal `__complete` command. You can
+use it to inspect the raw candidates returned for a command line without
+loading the completion script:
+
+```bash
+cli __complete deploy main st
+```
+
+Each argument after `__complete` represents one word in the command line. Pass
+an empty final argument to represent the blank word after a trailing space:
+
+```bash
+cli __complete deploy --config ""
+```
+
+Candidate lines are written to standard output, followed by an internal
+`:options=` line used by the shell adapters. This makes `__complete`
+useful when testing custom `static`, `dynamic`, or filesystem completions.
+
+!!! Note
+`__complete` is an internal completion endpoint intended for testing and shell
+integration. Users should normally load completions with
+`source <(cli completions bash)` or `source <(cli completions zsh)`.
+!!!
+
+[!button variant="primary" icon="code-review" text="Advanced Completions Example"](https://github.com/bashly-framework/bashly/tree/master/examples/completions-advanced#readme)

@@ -101,10 +101,24 @@ Allowed values are also added to generated bash completions automatically.
 
 ### completions
 
-[!badge Array of Strings]
+[!badge Hash]
 
-Specify an array of additional completion suggestions when used in conjunction
-with `bashly add completions`.
+Configure additional runtime completions for this argument:
+
+```yaml
+completions:
+  static: [main, develop]
+  dynamic:
+    - git branch --format='%(refname:short)'
+  options: [no-space]
+```
+
+- `static` contains literal candidates.
+- `dynamic` contains Bash commands or functions that print one candidate per
+  line.
+- `options` accepts `files`, `directories`, and `no-space`.
+
+All three keys are optional and can be combined.
 
 [!ref](/advanced/bash-completion.md)
 

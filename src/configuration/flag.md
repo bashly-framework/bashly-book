@@ -166,6 +166,32 @@ Remember to set the [`arg`](#arg) name when using this option.
 [!button variant="primary" icon="code-review" text="Whitelist Example"](https://github.com/bashly-framework/bashly/tree/master/examples/whitelist#readme)
 
 
+### completions
+
+[!badge Hash]
+
+Configure additional runtime completions for this flag's value:
+
+```yaml
+flags:
+- long: --config
+  arg: file
+  completions:
+    options: [files]
+```
+
+- `static` contains literal candidates.
+- `dynamic` contains Bash commands or functions that print one candidate per
+  line.
+- `options` accepts `files`, `directories`, and `no-space`.
+
+All three keys are optional and can be combined.
+
+Remember to set the [`arg`](#arg) name when using this option.
+
+[!ref](/advanced/bash-completion.md)
+
+
 ### conflicts
 
 [!badge Array of Strings]
@@ -179,18 +205,6 @@ This option should be specified on both sides of the exclusivity.
 !!!
 
 [!button variant="primary" icon="code-review" text="Conflicts Example"](https://github.com/bashly-framework/bashly/tree/master/examples/conflicts#readme)
-
-
-### completions
-
-[!badge Array of Strings]
-
-Specify an array of additional completion suggestions for this flag's value
-when used in conjunction with `bashly add completions`.
-
-Remember to set the [`arg`](#arg) name when using this option.
-
-[!ref](/advanced/bash-completion.md)
 
 
 ### needs

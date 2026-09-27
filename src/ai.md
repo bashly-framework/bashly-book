@@ -5,87 +5,89 @@ order: 50
 
 # Using Bashly with AI
 
-There are three practical ways to use AI while building Bashly projects.
-Choose the one that matches your workflow.
+The recommended way to use Bashly with a coding agent is to install the
+**Bashly Skill**. It gives the agent a maintained Bashly workflow and the
+references it needs to work on your project directly.
 
-## Quick chooser
+[!button variant="primary" icon="code-review" text="Get the Bashly Skill"](https://github.com/bashly-framework/bashly-ai-kit)
 
-| Route                 | Best for                                                    | Setup         |
-|:----------------------|:------------------------------------------------------------|:--------------|
-| Chat with any AI      | You already know Bashly and want fast iteration             | None          |
-| [Bashly Chat][chat]   | You want Bashly-focused guidance with minimal prompt tuning | Open link     |
-| [Bashly Skill][skill] | You use coding agents and want repeatable project workflows | Install skill |
+The skill helps agents:
 
-## Route 1: Chat with your favorite AI
+- Design and update command trees in `bashly.yml`.
+- Write command and library partials in the correct source folder.
+- Respect project-specific Bashly settings and paths.
+- Generate the CLI and validate representative command paths.
+- Use the installed Bashly reference and current official documentation instead
+  of guessing configuration keys.
 
-This is the simplest route if you are already familiar with Bashly.
+## Install the skill
 
-Give the model:
+### Codex
 
-1. Your CLI goal.
-2. Your current `bashly.yml` (or desired command tree).
-3. The behavior you want for each command.
+Ask Codex:
 
-Example starter prompt:
+```txt
+Install the skill from the master branch at https://github.com/bashly-framework/bashly-ai-kit/tree/master/skills/bashly
+```
+
+### Claude Code
+
+Ask Claude Code:
 
 ```text
-I am building a Bashly CLI.
-Please design or update my bashly.yml and command partials under src/.
-Keep names and help text concise.
-After editing, list the exact bashly generate command and 3 test commands.
+Install the Bashly skill from the master branch of
+https://github.com/bashly-framework/bashly-ai-kit into my user skills directory
+(~/.claude/skills/bashly/)
 ```
 
-## Route 2: Use Bashly Chat
+See the [Bashly AI Kit][skill] repository for manual and project-level
+installation details.
 
-[!button variant="primary" icon="copilot" text="Open Bashly Chat"](https://bashly.dev/chat)
+## Use the skill
 
-Use this when you want a Bashly-oriented assistant without setting up a local
-agent skill.
+Once installed, ask your coding agent for Bashly work normally. The skill can
+activate automatically for relevant requests, or you can mention the Bashly
+skill explicitly.
 
-!!!success Tip
-The bashly AI chat is available at [bashly.dev/chat][chat].
-!!!
-
-
-It is a good fit for:
-
-- Learning Bashly conventions.
-- Drafting command trees quickly.
-- Reviewing or improving existing `bashly.yml`.
-
-## Route 3: Use the Bashly Skill
-
-[!button variant="primary" icon="code-review" text="Bashly AI Kit"](https://github.com/bashly-framework/bashly-ai-kit)
-
-The Bashly Skill is intended for agent-based workflows (for example Codex or
-Claude Code), where the agent edits project files directly and follows a
-defined Bashly workflow.
-
-Install in Codex using the installer prompt shown in the repository README:
+For example:
 
 ```text
-install the skill from https://github.com/bashly-framework/bashly-ai-kit/tree/main/skills/bashly
-(master branch)
+Create a Bashly CLI with commands for adding, listing, and completing tasks.
+Generate it and test the main command paths.
 ```
 
-## Prompting tips for all routes
-
-To get better results, include these in your request:
-
-1. The exact command UX you want (`tool action ARG --flag`).
-2. Required vs optional arguments and flags.
-3. Validation rules and error behavior.
-4. Expected output examples.
-5. Your current file layout (`src/`, settings, overrides).
-
-When you have edits, run:
-
-```shell
-bashly generate
+```text
+Add a required FILE argument and a --force flag to the import command in this
+Bashly project, then regenerate and validate the CLI.
 ```
 
-Then test at least one `--help` path, one success path, and one error path.
+```text
+Find out why this Bashly command is not receiving its arguments and fix it.
+```
 
+For the best results, describe the command-line interface you want, including
+required arguments, optional flags, validation rules, and expected output.
 
-[chat]: https://bashly.dev/chat
+## Keep the skill current
+
+The installed skill is a local copy. To refresh it, ask your agent:
+
+```text
+Update the installed Bashly skill from the master branch at:
+https://github.com/bashly-framework/bashly-ai-kit/tree/master/skills/bashly
+
+Replace the existing installation.
+```
+
+## Alternative: project-level instructions
+
+If installing a skill is not practical, copy the
+[`AGENTS.md` template][agents-template] into the root of your Bashly project.
+This gives a coding agent a compact Bashly workflow without installing anything
+globally.
+
+The template is intentionally a fallback. The installable skill is the
+canonical and more complete option.
+
 [skill]: https://github.com/bashly-framework/bashly-ai-kit
+[agents-template]: https://github.com/bashly-framework/bashly-ai-kit/blob/master/templates/AGENTS.md

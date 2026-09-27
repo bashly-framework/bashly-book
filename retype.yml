@@ -39,11 +39,6 @@ links:
     link: https://github.com/bashly-framework/bashly/discussions
     icon: comment-discussion
     target: blank
-  - text: AI Assistant
-    link: /chat
-    icon: copilot
-    target: blank
-
 integrations:
   googleAnalytics:
     id: G-0MC7P9VV8W
